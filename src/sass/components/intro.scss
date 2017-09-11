@@ -6,12 +6,51 @@
 	padding: 2em 0;
 	background-color: $uikit-colour-Background;
 	margin-bottom: 2em;
-	margin-top: -2em;
+	margin-top: 0;
 
 	&.intro--withnav {
 		background-color: transparent;
 		padding-bottom: 0px;
 	}
+}
+
+.intro__metadata {
+	background-color: $uikit-colour-Background;
+
+	dl > dt {
+		margin: 0;
+		padding: uikit-space( 0.5 ) uikit-space( 0.5 ) 0 uikit-space( 0.5 );
+
+		@include uikit-media( sm ) {
+			width: 20%;
+		}
+	}
+
+	dl > dd {
+		margin: 0;
+	}
+
+	dd, dt {
+		display: block;
+
+		@include uikit-media( xs ) {
+			display: inline-block;
+			vertical-align: top;
+		}
+	}
+
+	dd {
+		padding: 0.75em;
+
+		@include uikit-media( sm ) {
+			width: 70%;
+		}
+	}
+}
+
+.intro__metadata--intro {
+	background-color: #fff;
+	margin-top: -1em;
 }
 
 .intro__headline {

@@ -1,18 +1,17 @@
 ---
 layout: blocks/image_content_block
-image: standard/foundations-video.jpg
-display: 2
+image: /standard/users-venn.png
+display: 3
+section: Why
 level: 2
-reverse: false
-title: The Digital Service Standard in Plain English
-imageAlt: "Placeholder image for a video."
-caption: "Watch 'The Digital Service Standard in Plain English'."
+reverse: true
+stackPosition: top
+title: Users shouldn't have to understand government
+imageAlt: "Venn diagram with 'you' and 'me' in circles and 'empathy' in the overlapping circle."
 ---
 
-The world is changing fast. Despite our best intentions, many government services are being left behind.
+The Digital Service Standard:
 
-To make government fit for the 21st century, we’re introducing a new and better way of working.
-
-The Digital Service Standard is your guide.
-
-['The Digital Service Standard in Plain English' video transcript]().
+- puts users of government services first
+- helps teams build services fast
+- helps government use technology better
