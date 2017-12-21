@@ -35,19 +35,20 @@ const Header = ( page ) => {
 								}
 							</a>
 						</div>
+						<div className="header__items">
+							<ul className="header__nav">
+								<li>The Standard</li>
+								<li>Articles</li>
+								<li>Tools</li>
+								<li>Events</li>
+								<li>Communities</li>
+							</ul>
 
-						<a href="https://www.surveymonkey.com/r/XFWJ5TC" className="feedback__btn uikit-btn">
-							Give feedback
-						</a>
-
-						<div className="header__breadcrumbs" id="nav">
-							{
-								breadcrumbs.length > 1
-									? <Breadcrumbs label="Breadcrumb for this page" items={ breadcrumbs } inverted={ theme === 'blue' || theme === 'dark' } />
-									: null
-							}
+							<div className="header__search">
+								<input className="header__searchinput"></input>
+								<span className="header__searchicon"></span>
+							</div>
 						</div>
-
 					</div>
 				</div>
 			</div>
