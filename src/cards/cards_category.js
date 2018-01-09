@@ -11,7 +11,7 @@ import Card from './card';
 const CardsCategory = ( page ) => (
 	<div className={`uikit-body uikit-grid cards cards--category`}>
 		<div className="container">
-			<ul className="row cards__list">
+			<ul className="cards__list">
 				{
 					page.cards.map( ( card, i ) => (
 						<li key={ i } className="col-sm-6 col-md-4 col-lg-3 cards__list__item">
@@ -39,17 +39,17 @@ CardsCategory.propTypes = {
 	 * cards:
 	 *   - image: http://via.placeholder.com/350x150
 	 *     headline: Agile delivery
-	 *     text: How to work in an agile way: principles, tools and governance.
+	 *     text: 'How to work in an agile way: principles, tools and governance.'
 	 *     link: '#url'
 	 *     background: rebeccapurple
 	 *   - image: http://via.placeholder.com/350x150
 	 *     headline: Agile delivery
-	 *     text: How to work in an agile way: principles, tools and governance.
+	 *     text: 'How to work in an agile way: principles, tools and governance.'
 	 *     link: '#url'
 	 *     background: rebeccapurple
 	 *   - image: http://via.placeholder.com/350x150
 	 *     headline: Agile delivery
-	 *     text: How to work in an agile way: principles, tools and governance.
+	 *     text: 'How to work in an agile way: principles, tools and governance.'
 	 *     link: '#url'
 	 *     cta: Blah!
 	 *     background: rebeccapurple

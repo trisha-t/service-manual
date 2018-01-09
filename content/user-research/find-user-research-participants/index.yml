@@ -1,4 +1,4 @@
-title: Find user research participants
+pagetitle: Find user research participants
 weight: 50
 layout: layout/topic
 theme: blue
@@ -15,6 +15,8 @@ main:
   - pop-up.md
   - brief-heading.md
   - brief.md
+  - brief-callout.md
+  - brief-ctd.md
   - bias-heading.md
   - bias.md
   - case-heading.md

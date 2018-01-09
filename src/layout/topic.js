@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import SkipLink from '../../scripts/uikit/skip-link.js';
 
 
 /**
@@ -8,10 +9,11 @@ import React from 'react';
 const Topic = ( page ) => (
 	<html>
 	<head>
-		<title>Guides - { page.title }</title>
+		<title>Guides - { page.pagetitle }</title>
 		<meta charSet="utf-8" />
-		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<meta httpEquiv="x-ua-compatible" content="ie=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content={ page.description } />
 
 		<link rel="stylesheet" href={ `/assets/css/site.css` } />
 		{ page.stylesheet != undefined
@@ -23,6 +25,18 @@ const Topic = ( page ) => (
 		<script src="/assets/js/svg4everybody.min.js" />
 	</head>
 	<body>
+
+		<SkipLink links={[
+			{
+				link: '#nav',
+				text: 'Skip to navigation',
+			},
+			{
+				link: '#content',
+				text: 'Skip to content',
+			}
+		]} />
+
 		<header className="uikit-body uikit-grid">
 			{ page.header }
 		</header>
@@ -45,9 +59,14 @@ const Topic = ( page ) => (
 
 Topic.propTypes = {
 	/**
-	 * title: Homepage
+	 * pagetitle: Homepage
 	 */
-	title: PropTypes.string.isRequired,
+	pagetitle: PropTypes.string.isRequired,
+
+	/**
+	 * description: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+	 */
+	description: PropTypes.string,
 
 	/**
 	 * main: (partials)(5)

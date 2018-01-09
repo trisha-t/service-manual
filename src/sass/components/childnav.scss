@@ -11,6 +11,11 @@
 		margin-top: uikit-space( 1 );
 	}
 
+	@include uikit-media( lg ) {
+		position: absolute;
+		right: 0;
+		z-index: 1;
+	}
 }
 
 .childnav__container {
@@ -90,10 +95,6 @@
 		height: auto;
 	}
 
-	@include uikit-media( xs ) {
-		width: 18em;
-	}
-
 	.navigation__item {
 		list-style: none;
 		padding-left: 0;
@@ -135,6 +136,11 @@
 	& .navigation__item__span {
 		padding-left: 1.5em;
 	}
+}
+
+.navigation--level-4 {
+	left: 15px;
+	position: relative;
 }
 
 .childnav__list {

@@ -34,7 +34,7 @@ const LinkList = ({ inverted, inline, items }) => (
 );
 
 const Breadcrumbs = ({ inverted, label, items }) =>	(
-	<nav className={ `uikit-breadcrumbs${ inverted ? ' uikit-breadcrumbs--inverted' : '' }` } aria-label={ label }>
+	<nav id="nav" className={ `uikit-breadcrumbs${ inverted ? ' uikit-breadcrumbs--inverted' : '' }` } aria-label={ label }>
 		<LinkList inverted={ inverted } inline items={ items } />
 	</nav>
 );
@@ -44,13 +44,15 @@ const Homeheader = ( page ) => {
 	const theme = page._pages[ page._ID ].theme ? page._pages[ page._ID ].theme : 'dark';
 	const breadcrumbs = [];
 
-	page._parents.map( ( parent ) => breadcrumbs.push({
-		link: ( page._pages[ parent ].url === page._pages[ page._ID ].url ? undefined : page._pages[ parent ].url ),
-		text: page._pages[ parent ].title,
+	page._parents
+		.filter( parent => parent !== 'index' )
+		.map( ( parent ) => breadcrumbs.push({
+			link: ( page._pages[ parent ]._url === page._pages[ page._ID ]._url ? undefined : page._pages[ parent ]._url ),
+			text: page._pages[ parent ].pagetitle,
 	}));
 
 	return (
-		<div className={`home__header header`}>
+		<div className={`home__header header`} id="content">
 			<div className="container">
 				<div className="row">
 					<div className="col-md-12">
@@ -74,6 +76,10 @@ const Homeheader = ( page ) => {
 											: null
 									}
 							</div>
+
+							<a href="https://www.surveymonkey.com/r/XFWJ5TC" className="feedback__btn uikit-btn">
+								Give feedback
+							</a>
 
 							{ /*	removed until nav is ready
 							<div className="header__menu">

@@ -1,7 +1,7 @@
 ---
 layout: cards/cards
 cards:
-  - headline: Identifying users and their needs
+  - headline: Understanding users and their needs
     text: User needs are the starting point for any service work.
     link: '/user-research/identifying-users-needs/'
   - headline: Getting support for user research
@@ -13,6 +13,9 @@ cards:
   - headline: Planning user research
     text: How to create a user research plan.
     link: '/user-research/planning-user-research/'
+  - headline: Using existing research and data
+    text: Use research that may already be available about your users’ needs.
+    link: '/user-research/planning-user-research/using-existing-research-data/'
   - headline: How user research changes during design and delivery
     text: The research activities you should do in each stage of the service design and delivery process.
     link: '/user-research/research-stages/'

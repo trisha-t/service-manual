@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-
+import SkipLink from '../../scripts/uikit/skip-link.js';
 
 /**
  * The page layout component
@@ -8,10 +8,12 @@ import React from 'react';
 const Page = ( page ) => (
 	<html>
 	<head>
-		<title>Guides - { page.title }</title>
+		<title>Guides - { page.pagetitle }</title>
 		<meta charSet="utf-8" />
-		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<meta name="google-site-verification" content="fXPmqCfxWVHNxpSlw6Bm6pmuUcMuTILat3eixX8gbM8" />
+		<meta httpEquiv="x-ua-compatible" content="ie=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content={ page.description }/>
 
 		<link rel="stylesheet" href={ `/assets/css/site.css` } />
 		{ page.stylesheet != undefined
@@ -23,6 +25,18 @@ const Page = ( page ) => (
 		<script src="/assets/js/svg4everybody.min.js" />
 	</head>
 	<body>
+
+		<SkipLink links={[
+			{
+				link: '#nav',
+				text: 'Skip to navigation',
+			},
+			{
+				link: '#content',
+				text: 'Skip to content',
+			}
+		]} />
+
 		<header role="banner" className="uikit-body uikit-grid">
 			{ page.header }
 		</header>
@@ -45,9 +59,14 @@ const Page = ( page ) => (
 
 Page.propTypes = {
 /**
-	 * title: Homepage
+	 * pagetitle: Homepage
 	 */
-	title: PropTypes.string.isRequired,
+	pagetitle: PropTypes.string.isRequired,
+
+	/**
+	 * description: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+	 */
+	description: PropTypes.string,
 
 	/**
 	 * main: (partials)(5)

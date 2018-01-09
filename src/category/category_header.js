@@ -45,13 +45,15 @@ const Categoryheader = ( page ) => {
 	const theme = page._pages[ page._ID ].theme ? page._pages[ page._ID ].theme : 'dark';
 	const breadcrumbs = [];
 
-	page._parents.map( ( parent ) => breadcrumbs.push({
-		link: ( page._pages[ parent ].url === page._pages[ page._ID ].url ? undefined : page._pages[ parent ].url ),
-		text: page._pages[ parent ].title,
+	page._parents
+		.filter( parent => parent !== 'index' )
+		.map( ( parent ) => breadcrumbs.push({
+			link: ( page._pages[ parent ]._url === page._pages[ page._ID ]._url ? undefined : page._pages[ parent ]._url ),
+			text: page._pages[ parent ].pagetitle,
 	}));
 
 	return (
-		<div className={`category__header category__header--${ theme } header category__header--ID-${ Slugify( page._ID ).toLowerCase() }`}>
+		<div id="content" className={`category__header category__header--${ theme } header category__header--ID-${ Slugify( page._ID ).toLowerCase() }`}>
 			<div className="container">
 				<div className="row">
 					<div className="col-md-12">
@@ -75,6 +77,10 @@ const Categoryheader = ( page ) => {
 											: null
 									}
 							</div>
+
+							<a href="https://www.surveymonkey.com/r/XFWJ5TC" className="feedback__btn uikit-btn">
+								Give feedback
+							</a>
 
 							{ /*
 								<div className="header__menu">

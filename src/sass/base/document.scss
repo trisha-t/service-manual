@@ -5,10 +5,13 @@ body {
 	padding: 0;
 }
 
-body {
-	display: flex;
-	flex-direction: column;
+@supports (display: flex) {
+	body {
+		flex-direction: column;
+		display: flex;
+	}
 }
+
 
 header[role='banner'] {
 	flex: none;
@@ -40,6 +43,14 @@ img {
 	max-width: ( $uikit-maxwidth - 5);
 }
 
+.text-right {
+	text-align: right;
+}
+
+.text-left {
+	text-align: left;
+}
+
 .uikit-body p + ul,
 .uikit-body p + ol,
 .uikit-body p + dd {
@@ -64,4 +75,9 @@ img {
 .uikit-body [tabindex="0"]:focus,
 .uikit-body :target {
 	outline: none;
+}
+
+
+.uikit-skip-link {
+	z-index: 10;
 }

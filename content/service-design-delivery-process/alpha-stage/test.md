@@ -13,7 +13,7 @@ Test with users using paper prototypes first. As you learn from your user resear
 A good prototype is not the real service but needs to show how the service works. The prototype must:
 - look and feel like a real digital service
 - have enough features for users to interact with
-- provide a seamless user experience along the ‘happy path’
+- show a seamless user experience along the ‘happy path’
 - use familiar design patterns — the [GOV.AU UI-Kit is an accessible CSS and JavaScript framework](https://github.com/govau/uikit) you can build with
 - include content and data that looks real
 - respond with alerts and feedback in the right places
@@ -36,7 +36,7 @@ Prototype by sketching in code, using HTML, CSS and JavaScript. Software like Ax
 
 Use a static-site generator (for example, [Jekyll](https://jekyllrb.com/)).
 
-A static-site generator allows you to keep your prototype simple, with just HTML, CSS and JavaScript, but allows you to easily share templates and stylesheets across multiple pages.
+A static-site generator allows you to keep your prototype simple, with just HTML, CSS and JavaScript, but allows you to easily share templates and style sheets across multiple pages.
 
 It is also easy for designers to make changes directly to the prototype, without having to wait on a developer to make changes.
 

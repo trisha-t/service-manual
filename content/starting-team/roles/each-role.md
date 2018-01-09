@@ -22,8 +22,8 @@ The service manager owns and is responsible for the [whole user experience](/ser
 
 -  a senior executive with the capacity to unblock obstacles, present and champion the service at the most senior levels of the Australian Public Service
 -  experienced leaders with a strong understanding of their service and its users
--  able to to ensure the service is delivered successfully and meets the needs of the users
--  able to assist in making sure internal processes are focussed on achieving results for the service
+-  able to ensure the service is delivered successfully and meets the needs of the users
+-  able to assist in making sure internal processes are focused on achieving results for the service
 -  available to the team, but not necessarily present with them at all times
 
 #### Delivery manager
@@ -53,7 +53,7 @@ Depending on the type of service you’re building, you may need a team of desig
 The service designer works from the user research to identify how a service could be delivered so that it better meets user needs. They:
 
 -  design user-focused services that meet web standards for all users, channels and touchpoints
--  create a blueprint or map of the proposed service to make sure the key parts are built in from the start
+-  create a blueprint or map of the proposed service to make sure the main parts are built in from the start
 -  help the team in the development and continual iteration of services, making sure that there are consistent user experiences
 
 #### Content designer
